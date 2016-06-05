@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MathJax TeX Test Page</title>
+    <!-- Copyright (c) 2010-2015 The MathJax Consortium -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+    <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+<h2>Уравнение Пуассона в круге</h2>
+<p>Дано:</p>
+<p>$\Delta U= \frac{\partial ^2U}{\partial x^2} + \frac{\partial ^2U}{\partial y^2} = f(x,y)$</p>
+<p>$x^2+y^2< R^2$</p>
+<p>$\Delta U(R)=q(x, y); x^2+y^2=R^2$</p>
+<h4>Решение</h4>
+<p> Перейдем к полярным координатам: </p>
+<p>$\left\{\begin{matrix} x=rcos\varphi
+    \\ y=rsin\varphi
+    \end{matrix}\right.$</p>
+<p>$\Delta U = U_{rr} + \frac{1}{r} U_{r} + \frac{1}{r^2} U_{\varphi \varphi}$</p>
+<p>$f(x, y) = f(rcos\varphi, rsin\varphi)$</p>
+<p>Преобразуем уравнение так, чтобы оно содержало только слагаемые типа $(a*r)^n cosk\varphi$ и/или $(b*r)^n sink\varphi$</p>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MathJax TeX Test Page</title>
+    <!-- Copyright (c) 2010-2015 The MathJax Consortium -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+    <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<p>
+<h2>Приведение уравнения к каноническому виду</h2>
+<p>Дано: $a_{11}U_{xx} + 2a_{12}U_{xy} + a_{22}U_{yy} + a_{1}U_{x} + a_{2}U_{y} + U = f(x, y)$</p>
+<p>Составим характеристическое уравнение</p>
+<p>$a_{11} (dy)^2  - 2a_{12}dxdy + a_{22}(dx)^2 = 0 $</p>
+<p>$\frac{D}{4} = a_{12}^2 - a_{11}a_{22}$</p>
+<p>В зависимости от знака D, уравнение относится к одному из типов: гиперболический, параболический, эллиптический</p>
+<ul>
+    <li>D>0 Гиперболический тип.
+        <p>$\left\{\begin{matrix}dy = s*dx
+        \\ dy =q*dx
+        \end{matrix}\right.\Rightarrow
+        \left\{\begin{matrix}dy = s*x + c_1
+        \\ y =q*x + c_2
+        \end{matrix}\right.$
+        </p>
+        <!--\Rightarrow -->
+        <p>$
+        \left\{\begin{matrix} \xi =c_1=y-sx
+        \\ \mu  =c_2=y-qx
+        \end{matrix}\right.$, где $\xi$ и $\mu$ общие интегралы
+        </p>
+    </li>
+    <li>D=0 Параболический тип. $\xi$ общий интеграл, $\mu$ - это x или y</li>
+    <li>D<0 Эллиптический тип. $\xi$ и $\mu$ - действительная и мнимая часть одного из решений</li>
+</ul>
+    <p>Далее необходимо выразить частные производные и подставить в эти выражения полученные ранее $\xi$ и $\mu$ </p>
+<p>$U_{x} = U_{\xi }\xi_x + U_{\mu }\mu_{x}$</p>
+<p>$U_{y} = U_{\xi }\xi_y + U_{\mu }\mu_{y}$</p>
+<p>$U_{xx} = (U_{\xi }\xi_x)_x + (U_{\mu }\mu_{x})_x =$</p><p>$ = (U_{\xi\xi }\xi_x \xi_x + U_{\xi\mu}\xi_x \mu_x + U_{\xi }\xi_{xx}) + (U_{\mu\xi}\mu_x \xi_x + U_{\mu\mu}\mu_x \mu_x + U_{\mu}\mu_{xx})$ </p>
+<p>$U_{xy} = (U_{\xi }\xi_x)_y + (U_{\mu }\mu_{x})_y=
+    (U_{\xi\xi }\xi_x \xi_y + U_{\xi\mu}\xi_x \mu_y + U_{\xi }\xi_{xy}) + (U_{\mu\xi}\mu_x \xi_y + U_{\mu\mu}\mu_x \mu_y + U_{\mu}\mu_{xy}) $</p>
+<p>$U_{yy} = (U_{\xi }\xi_y)_y + (U_{\mu }\mu_{y})_y =$</p><p>$ = (U_{\xi\xi }\xi_y \xi_y + U_{\xi\mu}\xi_y \mu_y + U_{\xi }\xi_{yy}) + (U_{\mu\xi}\mu_y \xi_y + U_{\mu\mu}\mu_y \mu_y + U_{\mu}\mu_{yy})$ </p>
+</body>
+</html>

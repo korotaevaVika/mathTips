@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MathJax TeX Test Page</title>
+    <!-- Copyright (c) 2010-2015 The MathJax Consortium -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+    <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+<h2>Ищем решения задачи Штурма-Лиувилля</h2>
+<p>Дано: ${X}''(x)+\lambda X(x)=0$</p>
+<h4>Решение</h4>
+<p> $p^{2}+\lambda =0  \rightarrow  p^{2}=-\lambda$</p>
+<p>Рассмотрим три случая</p>
+<ul><li>$-\lambda >0 \rightarrow X(x)=c_1e^{\sqrt{-\lambda} x} + c_2e^{-\sqrt{-\lambda} x} =
+        c_1sh{\sqrt{-\lambda} x} + c_2ch{\sqrt{-\lambda} x}$</li>
+    <li>$-\lambda = 0 \rightarrow {X}''(x)= 0 \rightarrow  X(x)=c_1x + c_2$</li>
+    <li>$-\lambda > 0 \rightarrow X(x)= c_1sin{\sqrt{\lambda} x} + c_2cos{\sqrt{\lambda} x}$</li>
+</ul>
+<p>Собственные значения и функции для различных граничных условий</p>
+<p>Для типа I-I $ \lambda _n = (\frac{\pi n}{l} )^{2}$ и $X_n (x)= sin(\frac{\pi n x}{l} )$</p>
+<p>Для типа I-II $ \lambda _n = (\frac{\pi}{l}(n - \frac{1}{2} ))^{2}$ и $X_n (x)= sin(\frac{\pi x}{l} (n-\frac{1}{2}))$</p>
+<p>Для типа II-I $ \lambda _n = (\frac{\pi}{l}(n - \frac{1}{2} ))^{2}$ и $X_n (x)= cos(\frac{\pi x}{l} (n-\frac{1}{2}))$</p>
+<p>Для типа II-II $ \lambda _n = (\frac{\pi n}{l} )^{2} $и$ X_n (x)= cos(\frac{\pi n x}{l} )$;$  \lambda _0 = 0$  и $X_0 = 1 $</p>
+
+</body>
+</html>
